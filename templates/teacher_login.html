@@ -1,44 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base_login.html' %} {% block login %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Teacher Login</title>
-</head>
+<!-- ! ADMIN LOGIN FROM !  -->
+<form class="clx" method="POST" action="/teacher_authinticate">
+    <h1>LOGIN PAGE FOR TEACHER</h1>
 
-<body>
-    <center>
-        <h1><a href="/" class="link-primary" role="button">Course Mania</a></h1>
-    </center>
-    <hr>
-    <br><br>
+    <!-- teacher id -->
+    <div class="mb-3">
+        <label for="exampleInputEmail1 ">Teacher ID</label>
+        <input type="email " class="form-control " name='teacherid' aria-describedby="emailHelp " placeholder="Enter your Teacher ID " autocomplete="off">
+    </div>
 
-    <center>
-        <h1> LOGIN PAGE FOR TEACHERS </h1>
-    </center>
-    <center>
-        <form method="POST" action="#">
-            <div class="teacher_login">
-                <br>
-                <label>Username : </label>
-                <input type="text" placeholder="Enter ID" name="adminID" autocomplete="off" required>
-                <br><br>
-                <label>Password : </label>
-                <input type="password" placeholder="Enter Password" name="adminPass" required>
-                <br><br>
-                <button type="submit">Login</button>
-                <button type="button" class="cancelbtn"> Cancel</button>
-                <br>
-            </div>
-        </form>
-        <div class="forgot-password">
-            <a href="#"> forgot password? </a>
-        </div>
-    </center>
-</body>
+    <!-- password -->
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
 
-</html>
+    <button type="submit " class="btn btn-outline-primary">Submit</button>
+    <a class="btn btn-outline-warning" href="/forgotten_password" role="button">Forgotten Password</a>
+</form>
+
+{% endblock %}
