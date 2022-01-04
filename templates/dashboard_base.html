@@ -12,8 +12,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- !BootStrap! -->
     <style>
-        #clx {
-            margin: 20% 20% 15%
+        .clx {
+            padding: 3% 3% 3%;
+            background-color: rgba(62, 157, 170, 0.438);
+            border-radius: 12px;
+        }
+        
+        .cls {
+            padding: 15% 20% 15%
         }
     </style>
 </head>
@@ -40,11 +46,16 @@
     </nav>
     <!-- !NAVIGATION BAR! -->
 
-    <!-- !MESSAGE CONTENT! -->
-    <div id="clx" class="alert alert-danger" role="alert">
-        <center>{{ message }} <a href="/" class="alert-link">Click to go back to the home page.</a></center>
-    </div>
-    <!-- !MESSAGE CONTENT! -->
+
+
+    <!-- !ADMIN PROFILE! -->
+    {% block profile %} {% endblock %}
+    <!-- !ADMIN PROFILE! -->
+
+
+    <!-- !ADMIN OPERATIONS! -->
+    {% block operations %} {% endblock %}
+    <!-- !ADMIN OPERATIONS! -->
 
 
 </body>
