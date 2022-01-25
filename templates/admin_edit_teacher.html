@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> Teacher Editorial Page  </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            var dataTable = $('#sample_data').DataTable();
+            $('#sample_data').editable({
+                container: 'body',
+                selector: 'td.name',
+                url: '/updateteacher',
+                title: 'Name',
+                type: 'POST',
+                validate: function(value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+
+            $('#sample_data').editable({
+                container: 'body',
+                selector: 'td.email',
+                url: '/updateteacher',
+                title: 'Email',
+                type: 'POST',
+                validate: function(value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+
+            $('#sample_data').editable({
+                container: 'body',
+                selector: 'td.password',
+                url: '/updateteacher',
+                title: 'Password',
+                type: 'POST',
+                validate: function(value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+
+            $('#sample_data').editable({
+                container: 'body',
+                selector: 'td.appointed_by',
+                url: '/updateteacher',
+                title: 'appointed_by',
+                type: 'POST',
+                validate: function(value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+
+
+
+<body>
+  <!-- !NAVIGATION BAR! -->
+
+                  <!-- <a class="nav-link" href="/admin_login">ADMIN</a> -->
+<!-- <a href="/admin_login" class= "btn btn-outline-success" role="button" aria-pressed="true">Primary link</a> -->
+  <!-- !NAVIGATION BAR! -->
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <h3 align="center">Teacher editorial page</h3>
+        <br />
+        <div class="panel panel-default">
+            <div class="panel-heading">DataTable</div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table id="sample_data" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Teacher_ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                                <th>Appointed_by</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in teachers %}
+                            <tr>
+                                <td data-pk="{{row.teacher_id}}">{{row.teacher_id}}</td>
+                                <td data-name="name" class="name" data-type="text" data-pk="{{row.teacher_id}}">{{row.name}}</td>
+                                <td data-name="email" class="email" data-type="text" data-pk="{{row.teacher_id}}">{{row.email}}</td>
+                                <td data-name="password" class="password" data-type="text" data-pk="{{row.teacher_id}}">{{row.password}}</td>
+                                <td data-name="appointed_by" class="appointed_by" data-type="text" data-pk="{{row.teacher_id}}">{{row.appointed_by}}</td>
+                                <td>
+                                    <form action="/delete_teacher" method='POST'>
+                                        <input type="hidden" id="teacher_id" name="teacher_id" value="{{row.teacher_id}}">
+                                        <input type="submit" value="delete">
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+ {% extends 'base_login.html' %} {% block login %}
+
+<div class="container">
+    <h3 align="center">Marks of {{student_name}}({{student_id}})</h3>
+    <br />
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Semester</th>
+                            <th>Type</th>
+                            <th>Total Marks</th>
+                            <th>Achieved Marks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in assesments %}
+                        <tr>
+                            {% for cell in row%}
+                            <td>
+                                {{cell}}
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br /> {% endblock %}

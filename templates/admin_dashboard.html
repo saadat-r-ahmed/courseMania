@@ -1,0 +1,23 @@
+{% extends 'dashboard_base.html' %} {% block profile %}
+<div class='clx'>
+
+    <h1>Welcome, {{admin_name}}</h1>
+    <br>
+    <a class="btn btn-primary" href="/admin_profile_edit_request" role="button">edit profile</a>
+    <a class="btn btn-primary" href="/logout" role="button">logout</a>
+
+</div>
+
+{% endblock %} {{admin_id}} {% block operations %}
+
+<div class='cls'>
+
+
+    <h3>Admin Operations</h3>
+    <a href="{{ url_for('edit_student') }}" class="btn btn-outline-primary btn-lg btn-block" role="button">EDIT STUDENT DATA</a>
+    <a href="{{ url_for('edit_teacher') }}" class="btn btn-outline-secondary btn-lg btn-block" role="button">EDIT TEACHER DATA</a>
+    <a href="{{ url_for('appoint_teacher') }}" class="btn btn-outline-success btn-lg btn-block" role="button">APPOINT TEACHERS</a>
+
+</div>
+
+{% endblock %}

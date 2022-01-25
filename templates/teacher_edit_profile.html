@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Teacher Edit Profile</title>
+    <!-- !BootStrap! -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- !BootStrap! -->
+    <style>
+        .clx {
+            padding: 3% 3% 3%;
+            background-color: rgba(62, 157, 170, 0.438);
+            border-radius: 12px;
+        }
+        
+        .cls {
+            padding: 15% 20% 15%
+        }
+        
+        .center {
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        form {
+            margin: 0 auto;
+            width: 500px;
+            /*find your value*/
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- !NAVIGATION BAR! -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">CourseMania</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item secondary">
+                    <a class="nav-link" href="/student_login">STUDENT<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item secondary">
+                    <a class="nav-link" href="/teacher_login">TEACHER</a>
+                </li>
+                <li class="nav-item secondary">
+                    <a class="nav-link" href="/admin_login">ADMIN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- !NAVIGATION BAR! -->
+
+    <br><br>
+    <div class=".center">
+        <h3 align='center'>Teacher Edit Profile</h3>
+        <form action="/commit_teacher_update" method="POST">
+            <div class="form-group row">
+                <label class="col-4 col-form-label" for="name">Name</label>
+                <div class="col-8">
+                    <input id="name" name="name" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-4 col-form-label">Email</label>
+                <div class="col-8">
+                    <input id="email" name="email" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-4 col-form-label">Password</label>
+                <div class="col-8">
+                    <input id="password" name="password" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-4 col-8">
+                    <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+
+</body>
+
+</html>

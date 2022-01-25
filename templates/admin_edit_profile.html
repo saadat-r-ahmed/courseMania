@@ -13,7 +13,25 @@
     <!-- !BootStrap! -->
     <style>
         .clx {
+            padding: 3% 3% 3%;
+            background-color: rgba(62, 157, 170, 0.438);
+            border-radius: 12px;
+        }
+        
+        .cls {
             padding: 15% 20% 15%
+        }
+        
+        .center {
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        form {
+            margin: 0 auto;
+            width: 500px;
+            /*find your value*/
+            text-align: center;
         }
     </style>
 </head>
@@ -40,9 +58,38 @@
     </nav>
     <!-- !NAVIGATION BAR! -->
 
-    <!-- !LOGIN CONTENTS! -->
-    {% block login %} {% endblock %}
-    <!-- !LOGIN CONTENTS! -->
+    <br><br>
+    <div class=".center">
+        <h3 align='center'>Admin Edit Profile</h3>
+        <form action="/commit_admin_update" method="POST">
+            <div class="form-group row">
+                <label class="col-4 col-form-label" for="name">Name</label>
+                <div class="col-8">
+                    <input id="name" name="name" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-4 col-form-label">Email</label>
+                <div class="col-8">
+                    <input id="email" name="email" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-4 col-form-label">Password</label>
+                <div class="col-8">
+                    <input id="password" name="password" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-4 col-8">
+                    <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
 
 </body>
 

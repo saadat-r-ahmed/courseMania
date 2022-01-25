@@ -1,0 +1,84 @@
+{% extends 'dashboard_base.html' %} {% block operations %}
+
+<form class="form-horizontal" action='/assignmarks' method="POST">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Update Marks</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="student_id">Student ID</label>
+            <div class="col-md-4">
+                <input id="student_id" name="student_id" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="course">Course</label>
+            <div class="col-md-4">
+                <input id="course" name="course" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="semester">Semester</label>
+            <div class="col-md-4">
+                <input id="semester" name="semester" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="type">Type</label>
+            <div class="col-md-4">
+                <input id="type" name="type" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="total_marks">Total Marks</label>
+            <div class="col-md-4">
+                <input id="total_marks" name="total_marks" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="achieved_marks">Marks Achieved</label>
+            <div class="col-md-4">
+                <input id="achieved_marks" name="achieved_marks" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="updated_by">Teacher ID</label>
+            <div class="col-md-4">
+                <input id="updated_by" name="updated_by" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="submit">Submit Marks</label>
+            <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+
+{% endblock %}

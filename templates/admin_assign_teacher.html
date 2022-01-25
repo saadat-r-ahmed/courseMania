@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Assignment page</title>
+    <style>
+        .cls {
+            width: 80%;
+            height: 30%;
+            padding: 50% 3% 3%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div name='cls' align='center'>
+        <h1 align='center'>Fill up the form to assign teacher</h1>
+        <form action="{{ url_for('createteacher') }}" method='POST'>
+            <div class="form-group row">
+                <label for="teacher_id" class="col-2 col-form-label">Teacher ID</label>
+                <div class="col-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-hashtag"></i>
+                            </div>
+                        </div>
+                        <input id="teacher_id" name="teacher_id" placeholder="unique teacher id" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="teacher_name" class="col-2 col-form-label">Name of the teacher</label>
+                <div class="col-8">
+                    <input id="teacher_name" name="teacher_name" placeholder="Mahbub Majumder" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="teacher_email" class="col-2 col-form-label">Email</label>
+                <div class="col-8">
+                    <input id="teacher_email" name="teacher_email" placeholder="abc@gmail.com" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="teacher_password" class="col-2 col-form-label">Password</label>
+                <div class="col-8">
+                    <input id="teacher_password" name="teacher_password" placeholder="pass#1av" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-4 col-8">
+                    <button name="submit" type="submit" class="btn btn-primary">Assign Teacher</button>
+                </div>
+            </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

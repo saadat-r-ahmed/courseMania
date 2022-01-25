@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- !BootStrap! -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- !BootStrap! -->
+    <style>
+        form {
+            padding: 10% 5% 12%;
+        }
+    </style>
+    <title>Task Creation</title>
+</head>
+
+<body>
+    <form class="form-horizontal" action="/assesmentcreation" method="POST">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>CREATE ASSESMENT</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="course">Course</label>
+                <div class="col-md-6">
+                    <input id="course" name="course" type="text" placeholder="CSE370, CSE221" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="semester">Semester</label>
+                <div class="col-md-6">
+                    <input id="semester" name="semester" type="text" placeholder="Summer2020, Fall2021" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="type">Type</label>
+                <div class="col-md-6">
+                    <input id="type" name="type" type="text" placeholder="assignment, quiz, lab" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="deadline">Deadline</label>
+                <div class="col-md-6">
+                    <input id="deadline" name="deadline" type="text" placeholder="YYYY-MM-YY" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="description">Description</label>
+                <div class="col-md-4">
+                    <textarea class="form-control" id="description" name="description"></textarea>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <button type="submit " class="btn btn-outline-primary">Submit</button>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
