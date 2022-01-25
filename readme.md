@@ -1,11 +1,17 @@
 # Course Mania
 ## An course and Exam Management App
 
-- Frame Work used - Flask
----
 
-### module folder:
-    - sql.py containing a sql cursor which takes in a sql query and returns as a list
+## Technologies used
+- Framework used - Flask
+- MySql
 
-### main.py:
-    - the main app file for the whole website
+
+## INITIALLY ASSUMED CONCEPTS FOR IMPLEMENTING THE PROJECT
+1. T he admin is created or assigned by the database admin
+2. Teacher entities are created & modified by admins
+3. All the teachers can modify a task based on their preferences
+4. Students can see all the tasks (due/overdue) and marks
+5. M arks are updated by the Teachers
+6. Each student achieves some mark and each assessment has multiple students taking the assessment
+
